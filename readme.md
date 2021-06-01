@@ -55,4 +55,4 @@ python MNIST_eval.py --model_path savedModel/MNIST/lr_0.01_lambada_0.02_rs_1000/
 ```angular2html
 python CIFAR_eval.py --model_path savedModel/CIFAR10/lr_0.01_lambada_0.03/model_best.pth.tar --attack_method PGD
 ```
-# LFR
+
