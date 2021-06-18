@@ -41,9 +41,9 @@ Green Line: Test Loss
 python cifar_defense.py -a resnet --depth 20 --epochs 300 --schedule 150 250 --lambada 0.03 --gpu_id 3 --save_dir SavedModels
 ```
 ### Accuracy Curve
-We can observe that the training accuracy rises rapidly while the test accuracy drops precipitously at epoch 200 . 
+We can observe that the training accuracy rises rapidly while the test accuracy drops precipitously at epoch 200. 
 ![img_2.png](images/img_2.png)
-We think the reason is probably that the second derivative of the neural network with ReLU activation does not exist. We will try to fix it in our future work.
+We think the reason is probably that the second derivative of the neural network with ReLU activation does not exist. We will further explore it in our future work.
 
 
 ## Evaluation
