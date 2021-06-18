@@ -1,4 +1,4 @@
-This is the implementation of our paper [Adversarial Defense via Local Flatness Regularization](https://arxiv.org/pdf/1910.12165.pdf), accepted by the IEEE International Conference on Image Processing (ICIP), 2020. This project is developed based on Python 3.7, created by Jia Xu and Yiming Li.
+This is the implementation of our paper [Adversarial Defense via Local Flatness Regularization](https://arxiv.org/pdf/1910.12165.pdf), accepted by the IEEE International Conference on Image Processing (ICIP), 2020. This project is developed based on Python 3.7, created by Jia Xu and [Yiming Li](https://scholar.google.com/citations?user=mSW7kU8AAAAJ&hl=zh-CN).
 
 ## Citation 
 If our work is useful for your research, please cite our paper as follows:
