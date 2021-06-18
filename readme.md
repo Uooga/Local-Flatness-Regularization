@@ -20,29 +20,32 @@ pip install -r requirements.txt
 ## Pretrained Models
 The pretrained models are saved in the folder
 `savedModel`
-## LFR Training
-### Training on MNIST
+## Training LFR on MNIST
 Run the command below to start the training process on MNIST and save the model to the directory `--save_dir`.
 ```angular2html
 python MNIST_defense.py --dataset MNIST --epochs 100 --lr 0.01 --gamma 0.1 --train_batch 128 --norm 'l_inf' --epsilon 0.3 --step_size 0.01 --num_steps 40 --lambada 0.02 --gpu_id 1 --save_dir SavedModels
 ```
 Use tensorboard to observe the accuracy and loss
-#### Accuracy Curve
+### Accuracy Curve
 ![img.png](images/img.png)
 Blue Line: Train Acc; 
 Red Line: Test Acc
-#### Loss Curve
+### Loss Curve
 ![img_1.png](images/img_1.png)
 Pink Line: Train Loss; 
 Green Line: Test Loss
-### A Failure Case: Training on CIFAR10
+
+
+## A Failure Case: Training LFRon CIFAR10
 ```angular2html
 python cifar_defense.py -a resnet --depth 20 --epochs 300 --schedule 150 250 --lambada 0.03 --gpu_id 3 --save_dir SavedModels
 ```
-#### Accuracy Curve
+### Accuracy Curve
 We can observe that the training accuracy rises rapidly while the test accuracy drops precipitously at epoch 200 . 
 ![img_2.png](images/img_2.png)
 We think the reason is probably that the second derivative of the neural network with ReLU activation does not exist. We will try to fix it in our future work.
+
+
 ## Evaluation
 Run the commnad to test the performance of our LFR model. Choose different attack method using `--attack_method`.
 We use the pretrained model in the folder `savedModel`
