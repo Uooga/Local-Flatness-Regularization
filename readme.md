@@ -36,7 +36,7 @@ Pink Line: Train Loss;
 Green Line: Test Loss
 
 
-## A Failure Case: Training LFRon CIFAR10
+## A Failure Case: Training LFR on CIFAR-10
 ```angular2html
 python cifar_defense.py -a resnet --depth 20 --epochs 300 --schedule 150 250 --lambada 0.03 --gpu_id 3 --save_dir SavedModels
 ```
@@ -53,7 +53,7 @@ We use the pretrained model in the folder `savedModel`
 ```angular2html
 python MNIST_eval.py --model_path savedModel/MNIST/lr_0.01_lambada_0.02_rs_1000/model_best.pth.tar --attack_method PGD
 ```
-### Evaluating on CIFAR10
+### Evaluating on CIFAR-10
 ```angular2html
 python cifar_eval.py --model_path savedModel/CIFAR10/lr_0.1_lambada_0.03/model_best.pth.tar --attack_method PGD
 ```
